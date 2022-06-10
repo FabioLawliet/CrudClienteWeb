@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "8be5b2d8-2126-4af7-af8f-484db4b6e76a": {
+      "ProjectGuid": "8be5b2d8-2126-4af7-af8f-484db4b6e76a",
+      "DisplayName": "CrudClienteWeb",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}

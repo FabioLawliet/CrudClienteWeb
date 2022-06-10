@@ -1,0 +1,8 @@
+C:\Projetos\CrudClienteWeb\CrudClienteWeb\obj\Debug\net6.0\CrudClienteWeb.csproj.AssemblyReference.cache
+C:\Projetos\CrudClienteWeb\CrudClienteWeb\obj\Debug\net6.0\CrudClienteWeb.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projetos\CrudClienteWeb\CrudClienteWeb\obj\Debug\net6.0\CrudClienteWeb.AssemblyInfoInputs.cache
+C:\Projetos\CrudClienteWeb\CrudClienteWeb\obj\Debug\net6.0\CrudClienteWeb.AssemblyInfo.cs
+C:\Projetos\CrudClienteWeb\CrudClienteWeb\obj\Debug\net6.0\CrudClienteWeb.csproj.CoreCompileInputs.cache
+C:\Projetos\CrudClienteWeb\CrudClienteWeb\obj\Debug\net6.0\CrudClienteWeb.MvcApplicationPartsAssemblyInfo.cache
+C:\Projetos\CrudClienteWeb\CrudClienteWeb\obj\Debug\net6.0\CrudClienteWeb.RazorAssemblyInfo.cache
+C:\Projetos\CrudClienteWeb\CrudClienteWeb\obj\Debug\net6.0\CrudClienteWeb.RazorAssemblyInfo.cs
