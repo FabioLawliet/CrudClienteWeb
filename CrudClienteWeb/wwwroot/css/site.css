@@ -16,3 +16,24 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.btn{
+    margin-top: 0px;
+    padding: 5px;
+}
+
+.btnCad {
+    margin-top: 15px;
+}
+
+h1{
+    text-align: center;
+}
+
+.pull-right {
+    text-align: right;
+}
+
+.rowForm {
+    margin-top: 15px;
+}
