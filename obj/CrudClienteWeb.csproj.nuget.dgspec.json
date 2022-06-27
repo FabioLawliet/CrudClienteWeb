@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Projetos\\CrudClienteWeb\\CrudClienteWeb.csproj": {}
+    "C:\\Users\\1known\\Documents\\CrudClienteWeb\\CrudClienteWeb.csproj": {}
   },
   "projects": {
-    "C:\\Projetos\\CrudClienteWeb\\CrudClienteWeb.csproj": {
+    "C:\\Users\\1known\\Documents\\CrudClienteWeb\\CrudClienteWeb.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projetos\\CrudClienteWeb\\CrudClienteWeb.csproj",
+        "projectUniqueName": "C:\\Users\\1known\\Documents\\CrudClienteWeb\\CrudClienteWeb.csproj",
         "projectName": "CrudClienteWeb",
-        "projectPath": "C:\\Projetos\\CrudClienteWeb\\CrudClienteWeb.csproj",
-        "packagesPath": "D:\\Users\\fgbezerra\\.nuget\\packages\\",
-        "outputPath": "C:\\Projetos\\CrudClienteWeb\\obj\\",
+        "projectPath": "C:\\Users\\1known\\Documents\\CrudClienteWeb\\CrudClienteWeb.csproj",
+        "packagesPath": "C:\\Users\\1known\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\1known\\Documents\\CrudClienteWeb\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "D:\\Users\\fgbezerra\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\1known\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -46,29 +46,25 @@
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[6.0.5, )"
+              "version": "[6.0.6, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[6.0.5, )"
+              "version": "[6.0.6, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[6.0.5, )"
+              "version": "[6.0.6, )"
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
-              "version": "[6.0.5, )"
-            },
-            "Npgsql": {
-              "target": "Package",
-              "version": "[6.0.4, )"
+              "version": "[6.0.6, )"
             },
             "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
-              "version": "[6.0.4, )"
+              "version": "[6.0.5, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -93,7 +89,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -1,5 +1,5 @@
-﻿using CrudClienteWeb.Models;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
+using CrudClienteWeb.Models;
 using System.Diagnostics;
 
 namespace CrudClienteWeb.Controllers

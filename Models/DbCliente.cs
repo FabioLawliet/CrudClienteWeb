@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 namespace CrudClienteWeb.Models
 {
-    [Table("clientes", Schema = "public")]
+    [Table("cliente", Schema = "public")]
     public class DbCliente
     {
         [Key]
@@ -16,8 +16,7 @@ namespace CrudClienteWeb.Models
         public string bairro { get; set; }
         public string complemento { get; set; }
         public string cep { get; set; }
-        public int idcidade { get; set; }
+        public string nomecidade { get; set; }
         public int idestado { get; set; }
-
     }
 }

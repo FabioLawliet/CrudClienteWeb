@@ -1,14 +1,13 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
-
 namespace CrudClienteWeb.Models
 {
-    [Table("estados", Schema = "public")]
+    [Table("estado", Schema = "public")]
     public class DbEstado
-    {        
+    {
         [Key]
-        public int id { get; set; }
+        public int idestado { get; set; }
         public string nome { get; set; }
-        
+        public string sigla { get; set; }
     }
 }

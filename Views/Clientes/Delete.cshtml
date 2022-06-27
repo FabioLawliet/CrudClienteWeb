@@ -1,4 +1,4 @@
-﻿@model CrudClienteWeb.Models.DbCliente
+﻿@model CrudClienteWeb.Models.DtoCliente
 
 @{
     ViewData["Title"] = "Delete";
@@ -67,16 +67,15 @@
             Cidade
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.idcidade)
+            @Html.DisplayFor(model => model.nomecidade)
         </dd>
         <dt class = "col-sm-2">
             Estado
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.idestado)
+            @Html.DisplayFor(model => model.siglaestado)
         </dd>
-    </dl>
-    
+    </dl>    
 	<form asp-action="Delete">
         <input type="hidden" asp-for="id" />
         <input type="submit" value="Deletar" class="btn btnCad btn-danger" />

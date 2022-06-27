@@ -1,9 +1,14 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.0.31919.166
+VisualStudioVersion = 17.1.32228.430
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrudClienteWeb", "CrudClienteWeb.csproj", "{0823F90A-4980-47A2-9EE2-8867B4A62C32}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CrudClienteWeb", "CrudClienteWeb.csproj", "{34218FB9-4683-4B73-9B94-38EB1A13C48A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{FFB61A22-B735-46AF-80C0-DBBCE3CC7009}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +16,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{0823F90A-4980-47A2-9EE2-8867B4A62C32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0823F90A-4980-47A2-9EE2-8867B4A62C32}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0823F90A-4980-47A2-9EE2-8867B4A62C32}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0823F90A-4980-47A2-9EE2-8867B4A62C32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34218FB9-4683-4B73-9B94-38EB1A13C48A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34218FB9-4683-4B73-9B94-38EB1A13C48A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34218FB9-4683-4B73-9B94-38EB1A13C48A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34218FB9-4683-4B73-9B94-38EB1A13C48A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {7406282D-33D7-4F47-941D-867826EFEAF8}
+		SolutionGuid = {D1BE4901-FB78-4E8A-9BCF-6BC48ED84E14}
 	EndGlobalSection
 EndGlobal

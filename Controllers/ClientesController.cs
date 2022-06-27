@@ -21,32 +21,69 @@ namespace CrudClienteWeb.Controllers
         // GET: Clientes
         public async Task<IActionResult> Index()
         {
-              return _context.clientes != null ? 
-                          View(await _context.clientes.ToListAsync()) :
-                          Problem("Entity set 'Context.clientes'  is null.");
+            /*
+              return _context.cliente != null ? 
+                          View(await _context.cliente.ToListAsync()) :
+                          Problem("Entity set 'Context.cliente'  is null.");*/
+
+            List<DbCliente> lista = (from c in _context.cliente
+                                      join e in _context.estado on c.idestado equals e.idestado
+                                      orderby c.nome
+                                      select new DbCliente
+                                      {
+                                          id = c.id,
+                                          nome = c.nome,
+                                          cpfcnpj = c.cpfcnpj,
+                                          rgie = c.rgie,
+                                          ativo = c.ativo
+                                      }).ToList();
+            return View(lista);
         }
 
         // GET: Clientes/Details/5
         public async Task<IActionResult> Details(int? id)
         {
-            if (id == null || _context.clientes == null)
+            if (id == null || _context.cliente == null)
             {
                 return NotFound();
             }
 
-            var dbCliente = await _context.clientes
-                .FirstOrDefaultAsync(m => m.id == id);
-            if (dbCliente == null)
+            var DtoCli = (from c in _context.cliente
+                         join e in _context.estado on c.idestado equals e.idestado
+                         where c.id == id
+                         orderby c.nome
+                         select new DtoCliente
+                         {
+                             id = c.id,
+                             nome = c.nome,
+                             cpfcnpj = c.cpfcnpj,
+                             rgie = c.rgie,
+                             ativo = c.ativo,
+                             endereco = c.endereco,
+                             numero = c.numero,
+                             bairro = c.bairro,
+                             complemento = c.complemento,
+                             cep = c.cep,
+                             nomecidade = c.nomecidade,
+                             idestado = c.idestado,
+                             siglaestado = e.sigla
+                         }).First();
+
+            if (DtoCli == null)
             {
                 return NotFound();
             }
 
-            return View(dbCliente);
+            ViewBag.Estado = new SelectList(_context.estado, "idestado", "sigla");
+
+            return View(DtoCli);
         }
 
         // GET: Clientes/Create
         public IActionResult Create()
         {
+            ViewBag.Estado = new SelectList(_context.estado, "idestado", "sigla");
+
             return View();
         }
 
@@ -55,7 +92,7 @@ namespace CrudClienteWeb.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("id,nome,cpfcnpj,rgie,ativo,endereco,numero,bairro,complemento,cep,idcidade,idestado")] DbCliente dbCliente)
+        public async Task<IActionResult> Create([Bind("id,nome,cpfcnpj,rgie,ativo,endereco,numero,bairro,complemento,cep,nomecidade,idestado")] DbCliente dbCliente)
         {
             if (ModelState.IsValid)
             {
@@ -69,17 +106,39 @@ namespace CrudClienteWeb.Controllers
         // GET: Clientes/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
-            if (id == null || _context.clientes == null)
+            if (id == null || _context.cliente == null)
             {
                 return NotFound();
             }
 
-            var dbCliente = await _context.clientes.FindAsync(id);
-            if (dbCliente == null)
+            var DbCli = (from c in _context.cliente
+                         join e in _context.estado on c.idestado equals e.idestado
+                         where c.id == id
+                         orderby c.nome
+                         select new DbCliente
+                         {
+                             id = c.id,
+                             nome = c.nome,
+                             cpfcnpj = c.cpfcnpj,
+                             rgie = c.rgie,
+                             ativo = c.ativo,
+                             endereco = c.endereco,
+                             numero = c.numero,
+                             bairro = c.bairro,
+                             complemento = c.complemento,
+                             cep = c.cep,
+                             nomecidade = c.nomecidade,
+                             idestado = c.idestado
+                         }).First();
+
+            if (DbCli == null)
             {
                 return NotFound();
             }
-            return View(dbCliente);
+
+            ViewBag.Estado = new SelectList(_context.estado, "idestado", "sigla");
+
+            return View(DbCli);
         }
 
         // POST: Clientes/Edit/5
@@ -87,7 +146,7 @@ namespace CrudClienteWeb.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("id,nome,cpfcnpj,rgie,ativo,endereco,numero,bairro,complemento,cep,idcidade,idestado")] DbCliente dbCliente)
+        public async Task<IActionResult> Edit(int id, [Bind("id,nome,cpfcnpj,rgie,ativo,endereco,numero,bairro,complemento,cep,nomecidade,idestado")] DbCliente dbCliente)
         {
             if (id != dbCliente.id)
             {
@@ -120,19 +179,40 @@ namespace CrudClienteWeb.Controllers
         // GET: Clientes/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
-            if (id == null || _context.clientes == null)
+            if (id == null || _context.cliente == null)
             {
                 return NotFound();
             }
 
-            var dbCliente = await _context.clientes
-                .FirstOrDefaultAsync(m => m.id == id);
-            if (dbCliente == null)
+            var DtoCli = (from c in _context.cliente
+                          join e in _context.estado on c.idestado equals e.idestado
+                          where c.id == id
+                          orderby c.nome
+                          select new DtoCliente
+                          {
+                              id = c.id,
+                              nome = c.nome,
+                              cpfcnpj = c.cpfcnpj,
+                              rgie = c.rgie,
+                              ativo = c.ativo,
+                              endereco = c.endereco,
+                              numero = c.numero,
+                              bairro = c.bairro,
+                              complemento = c.complemento,
+                              cep = c.cep,
+                              nomecidade = c.nomecidade,
+                              idestado = c.idestado,
+                              siglaestado = e.sigla
+                          }).First();
+
+            if (DtoCli == null)
             {
                 return NotFound();
             }
 
-            return View(dbCliente);
+            ViewBag.Estado = new SelectList(_context.estado, "idestado", "sigla");
+
+            return View(DtoCli);
         }
 
         // POST: Clientes/Delete/5
@@ -140,14 +220,14 @@ namespace CrudClienteWeb.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            if (_context.clientes == null)
+            if (_context.cliente == null)
             {
-                return Problem("Entity set 'Context.clientes'  is null.");
+                return Problem("Entity set 'Context.cliente'  is null.");
             }
-            var dbCliente = await _context.clientes.FindAsync(id);
+            var dbCliente = await _context.cliente.FindAsync(id);
             if (dbCliente != null)
             {
-                _context.clientes.Remove(dbCliente);
+                _context.cliente.Remove(dbCliente);
             }
             
             await _context.SaveChangesAsync();
@@ -156,7 +236,7 @@ namespace CrudClienteWeb.Controllers
 
         private bool DbClienteExists(int id)
         {
-          return (_context.clientes?.Any(e => e.id == id)).GetValueOrDefault();
+          return (_context.cliente?.Any(e => e.id == id)).GetValueOrDefault();
         }
     }
 }
